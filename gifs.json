@@ -2,6 +2,12 @@
 {
   "gifs": [
     {
+      "_id": 0,
+      "name": "notfound",
+      "url": "https://i.gifer.com/7iJU.gif",
+      "description": "404 not found"
+    },
+    {
       "_id": 1,
       "name": "sheepit",
       "url": "https://i.imgur.com/1nEi4vq.gif",
