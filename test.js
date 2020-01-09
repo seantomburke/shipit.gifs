@@ -12,13 +12,15 @@ const assert = (message, condition) => ((mark = green) && condition && errors++ 
 const cache = () => (_cache = { _names }, fs.writeFileSync('./.cache.json', JSON.stringify(_cache)), true);
 
 const test = () => {
-  assert('The _id needs to be the same as its position in the array', (gifs.some((gif, i) => gif._id !== i + 1)));
   assert('The existing names cannot be changed', _names.some((name, i) => gifs[i] && name !== gifs[i].name));
   assert('The existing entries cannot be removed', gifs.length < _names.length);
+  assert('The entry needs to include an _id', gifs.some((gif, i) => !gif._id || !gif._id));
   assert('The entry needs to include a description', gifs.some((gif, i) => !gif.description || !gif.description.length));
   assert('The entry needs to include a name', gifs.some((gif, i) => !gif.name || !gif.name.length));
   assert('The entry needs to include a url', gifs.some((gif, i) => !gif.url || !gif.url.length));
-  assert('The name must not start with a number', gifs.some((gif, i) => /^[0-9]/g.test(gif.name)));
+  assert('The _id needs to be the same as its position in the array', (gifs.some((gif, i) => gif._id !== i + 1)));
+  assert('The _id needs to be a number', gifs.some(gif => !/\d+/g.test(gif._id) || !(typeof gif._id === 'number')));
+  assert('The name must not start with a number', gifs.some(gif => /^\d/g.test(gif.name)));
   assert('The name must be unique', !(names.length === new Set(names).size));
 }
 
