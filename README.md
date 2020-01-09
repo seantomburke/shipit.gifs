@@ -11,8 +11,9 @@ Rules for contributing GIFs
 5. The entry needs to include a url
 4. The entry needs to include a name
 3. The entry needs to include a description
-6. The _id needs to be the same as its position in the array
+6. The _id needs to be the same as its index in the array
 7. The _id needs to be a number
 8. The name must not start with a number
 9. The name must be unique
+10. The name must only contain lowercase letters, numbers and dashes (-)
 
