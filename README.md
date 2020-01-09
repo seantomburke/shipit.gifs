@@ -4,7 +4,20 @@ The database of GIFs for https://shipit.today
 ![](https://i.shipit.today)
 
 # How to Contribute
-Rules for contributing GIFs
+
+## General Rules
++ Be a good person
++ Add GIFs that can be used in the context of shipping code reviews, design reviews or just any "Looks good to me" moment
++ Use GIFs at a reasonable size, no more than 5MB.
++ GIFs need to pass all tests and be approved in a Pull Request.
++ Keep names all lowercase, the only special character that is allowed is a dash `-`.
++ Include all fields: `_id`, `name`, `url`, `description`, `active`.
++ Don't remove or rename any previously submitted GIFs as they could be used in the wild already.
++ If a GIF is broken, mark the active state to 0 or fix the URL.
++ Add a description so it is easy to understand the content of the GIF without opening it.
++ No graphic content.
+
+## Rules that will be tested
 
 1. The existing names cannot be changed
 2. The existing entries cannot be removed
@@ -16,4 +29,25 @@ Rules for contributing GIFs
 8. The name must not start with a number
 9. The name must be unique
 10. The name must only contain lowercase letters, numbers and dashes (-)
+11. The active property should be set to 1, this will be used to mark broken gifs
 
+## Structure of new submissions
+
+```json
+{
+    "gifs": [
+        {
+            "_id": 10,
+            "name": "someuniquename",
+            "url": "https://foo.com/some.gif",
+            "description": "Some description",
+            "active": 1
+        }
+    ]
+}
+```
+
+## Submitting a contribution
+
+1. Create a pull request with your changes
+2. 
