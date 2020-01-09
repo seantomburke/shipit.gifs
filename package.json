@@ -1,0 +1,24 @@
+{
+  "name": "shipit.gifs",
+  "version": "1.0.0",
+  "description": "GIFs data for https://shipit.today",
+  "main": "gifs.json",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seantomburke/shipit.gifs.git"
+  },
+  "keywords": [
+    "shipit",
+    "lgtm",
+    "gifs"
+  ],
+  "author": "Sean Burke <@seantomburke>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seantomburke/shipit.gifs/issues"
+  },
+  "homepage": "https://github.com/seantomburke/shipit.gifs#readme"
+}
