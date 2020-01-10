@@ -22,15 +22,19 @@ The database of GIFs for https://shipit.today
 
 1. The existing names cannot be changed
 2. The existing entries cannot be removed
-5. The entry needs to include a url
-4. The entry needs to include a name
-3. The entry needs to include a description
-6. The _id needs to be the same as its index in the array
-7. The _id needs to be a number
-8. The name must not start with a number
-9. The name must be unique
-10. The name must only contain lowercase letters, numbers and dashes (-)
-11. The active property should be set to 1, this will be used to mark broken gifs
+3. The _id is required
+4. The _id needs to be the same as its index in the array
+5. The _id needs to be a number
+6. The name is required
+7. The name must be less than 50 characters
+8. The name must be unique
+9. The name must only contain lowercase letters, numbers and dashes (-)
+10. The name must start with a lowercase letter
+11. The url is required
+12. The url must be less than 2000 characters
+13. The description is required
+14. The description must be less than 200 characters
+15. The active state is required
 
 ## Structure of new submissions
 
@@ -50,7 +54,7 @@ The database of GIFs for https://shipit.today
 
 ## Submitting a contribution
 
-1. Add your gif with the appropriate structure
+1. Add your gif to the end of the gifs array in `gifs.json` with the correct JSON structure
 2. Run `npm test` to make sure everything passes
 3. Run `npm build` to generate the updated `.cache.json` file
 4. Create a pull request with the 2 file changes
