@@ -23,8 +23,8 @@ const assert = (message, condition) => ((mark = green) && condition && errors++ 
 const test = () => {
   console.log(clear);
   console.log('Running tests for shipit.gifs');
-  assert('The existing names cannot be changed', _names.some((name, i) => name !== gifs[i].name));
   assert('The existing entries cannot be removed', gifs.length < _names.length);
+  assert('The existing names cannot be changed', !_names.every((name, i) => gifs[i] && name === gifs[i].name));
   assert('The _id is required', gifs_.some(gif => !Number.isInteger(gif._id)));
   assert('The _id needs to be the same as its index in the array', (gifs.some((gif, i) => gif._id !== i)));
   assert('The _id needs to be a number', !gifs_.every(gif => /\d+/g.test(gif._id) && typeof gif._id === 'number'));
