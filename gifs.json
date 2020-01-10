@@ -70,6 +70,13 @@
       "url": "https://i.gifer.com/3CQP.gif",
       "description": "Are you guys silly? I'm still gonna send it (snowmobile guy)",
       "active": 1
+    },
+    {
+      "_id": 10,
+      "name": "andy",
+      "url": "https://media1.giphy.com/media/d2ZeMUDQSSsCP9FC/giphy.gif",
+      "description": "Andy Samberg from Brookly 99 thumbs up",
+      "active": 1
     }
   ]
 }
