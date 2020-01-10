@@ -82,7 +82,8 @@
       "_id": 11,
       "name": "kylo",
       "url": "https://media0.giphy.com/media/iXQ8SgaMQAgtq/giphy.gif",
-      "description": "Kylo Ren as Matt Radar Technician thumbs up SNL"
+      "description": "Kylo Ren as Matt Radar Technician thumbs up SNL",
+      "active": 1
     }
   ]
 }
