@@ -54,11 +54,10 @@ The database of GIFs for https://shipit.today
 
 ## Submitting a contribution
 
-1. Add your gif to the end of the gifs array in `gifs.json` with the correct JSON structure
+1. Add your gif to the end of the gifs array in [`gifs.json`](https://github.com/seantomburke/shipit.gifs/blob/master/gifs.json) with the correct JSON structure
 2. Run `npm test` to make sure everything passes
-3. Run `npm build` to generate the updated `.cache.json` file
-4. Create a pull request with the 2 file changes
-5. Make sure to include the GIF in an image tag in the comment section for easy review
-6. Wait for submission to be approved
+3. Create a pull request with the 2 file changes
+4. Make sure to include the GIF in an image tag in the comment section of the Pull Request for easy review
+5. Wait for submission to be approved
 
 Created by [@seantomburke](https://www.linkedin.com/in/seanthomasburke) ©2020
