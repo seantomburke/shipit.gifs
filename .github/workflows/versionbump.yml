@@ -23,12 +23,19 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm test and build
-      run: |
-        npm run build --if-present
-        npm test
+    - name: npm test
+      run: npm test
       env:
         CI: true
+    - name: update cache
+    - run: | 
+        npm cache
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -m "updating cache" -a
     - name: bump version
       run: |
         npm version patch
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -m "bumping version" -a
