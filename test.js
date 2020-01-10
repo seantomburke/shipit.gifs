@@ -10,8 +10,8 @@ let mark = green;
 let errors = 1;
 const names = gifs.map(gif => gif.name);
 const gifs_ = gifs.slice().reverse();
+const _names_ = _names.slice().reverse();
 console.log(gifs, gifs_);
-const names_ = names.slice().reverse();
 
 const assert = (message, condition) => ((mark = green) && condition && errors++ && (mark = red), console.log(mark, message));
 
@@ -22,7 +22,7 @@ const assert = (message, condition) => ((mark = green) && condition && errors++ 
 const test = () => {
   console.log(clear);
   console.log('Running tests for shipit.gifs');
-  assert('The existing names cannot be changed', names_.some((name, i) => gifs_[i] && name !== gifs_[i].name));
+  assert('The existing names cannot be changed', _names_.some((name, i) => gifs_[i] && name !== gifs_[i].name));
   assert('The existing entries cannot be removed', gifs.length < _names.length);
   assert('The _id is required', gifs_.some(gif => !Number.isInteger(gif._id)));
   assert('The _id needs to be the same as its index in the array', (gifs.some((gif, i) => gif._id !== i)));
