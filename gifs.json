@@ -131,7 +131,8 @@
       "_id": 18,
       "name": "buttonmash",
       "url": "https://media.tenor.com/images/b7e1207167670eb305f4d3b11ae4d29a/tenor.gif",
-      "description": "ship it, fuck design, ship this shit now!"
+      "description": "ship it, fuck design, ship this shit now!",
+      "active": 1
     }
   ]
 }
