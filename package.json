@@ -4,7 +4,7 @@
   "description": "GIFs data for https://shipit.today",
   "main": "gifs.json",
   "scripts": {
-    "start": "node test.js && node cache.js",
+    "build": "node test.js && node cache.js",
     "test": "node test.js"
   },
   "repository": {
