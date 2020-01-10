@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/seantomburke/shipit.gifs.svg?branch=master)](https://travis-ci.org/seantomburke/shipit.gifs)![](https://github.com/seantomburke/shipit.gifs/workflows/.github/workflows/npmpublish.yml/badge.svg)![](https://github.com/seantomburke/shipit.gifs/workflows/.github/workflows/npmtestpullrequest.yml/badge.svg)![](https://github.com/seantomburke/shipit.gifs/workflows/.github/workflows/versionbump.yml/badge.svg)
+
 # [shipit.gifs](https://www.shipit.today)
 The database of GIFs for https://www.shipit.today
 
