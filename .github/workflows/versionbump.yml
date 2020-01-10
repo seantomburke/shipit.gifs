@@ -30,7 +30,7 @@ jobs:
         CI: true
     - name: update cache
       run: | 
-        npm cache
+        npm run cache
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git commit -m "updating cache" -a
