@@ -1,5 +1,5 @@
-# shipit.gifs
-The database of GIFs for https://shipit.today
+# [shipit.gifs](https://www.shipit.today
+The database of GIFs for https://www.shipit.today
 
 ![](https://i.shipit.today)
 
