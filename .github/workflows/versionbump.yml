@@ -33,7 +33,8 @@ jobs:
         npm run cache
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git commit -m "updating cache" -a
+        git add -A
+        git diff-index --quiet HEAD || git commit -m "updating cache"
         git push
     - name: bump version
       run: |
