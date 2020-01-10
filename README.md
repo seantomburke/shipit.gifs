@@ -21,22 +21,25 @@ The database of GIFs for https://shipit.today
 
 ## Rules that will be tested
 
-+ The existing names cannot be changed
 + The existing entries cannot be removed
++ The existing names cannot be changed
 + The _id is required
-+ The _id needs to be the same as its inex in the array
++ The _id needs to be the same as its index in the array
 + The _id needs to be a number
 + The name is required
 + The name must be less than 50 characters
++ The name must be greater than 1 character
 + The name must be unique
 + The name must only contain lowercase letters, numbers and dashes (-)
 + The name must start with a lowercase letter
++ The url paths must be unique
 + The url is required
 + The url must be less than 2000 characters
-+ The url must start with https://
-+ The url must use an approved domain
++ The url protocol must start with https://
++ The url domain must be an approved domain
 + The url must not have query params
-+ The url must end with .gif
++ The url must not have a fragment
++ The url path must end with .gif
 + The description cannot contain special characters
 + The description is required
 + The description must be less than 200 characters
