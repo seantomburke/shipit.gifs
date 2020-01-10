@@ -1,6 +1,8 @@
-let { gifs } = require('./gifs.json');
-const { _names } = require('./.cache.json');
 const fs = require('fs');
+const url = require('url');
+let { gifs } = require('./gifs.json');
+let { domains } = require('./domains.json');
+const { _names } = require('./.cache.json');
 
 const red = '\033[38;5;124m𝗑\033[38;5;196m';
 const yellow = '\033[38;5;226m';
@@ -32,6 +34,10 @@ const test = () => {
   assert('The name must start with a lowercase letter', gifs_.some(gif => !/^[a-z]/g.test(gif.name)));
   assert('The url is required', gifs_.some(gif => gif.url == null || !gif.url));
   assert('The url must be less than 2000 characters', gifs_.some(gif => gif.url && gif.url.length > 2000));
+  assert('The url must start with https://', gifs_.some(gif => gif.url && !gif.url.startsWith('https://')));
+  assert('The url must use an approved domain', gifs_.some(gif => !domains.includes(url.parse(gif.url).host.split('.').slice(-2).join('.'))));
+  assert('The url must not have query params', gifs_.some(gif => url.parse(gif.url).search));
+  assert('The url must end with .gif', gifs_.some(gif => !url.parse(gif.url).pathname.endsWith('.gif')));
   assert('The description cannot contain special characters', gifs_.some(gif => !/[a-zA-Z0-9,.!&#@()'%$-_+=?]*/g.test(gif.name)));
   assert('The description is required', gifs_.some(gif => gif.description == null || !gif.description));
   assert('The description must be less than 200 characters', gifs_.some(gif => gif.description && gif.description.length > 200));

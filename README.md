@@ -7,9 +7,10 @@ The database of GIFs for https://shipit.today
 
 ## General Rules
 + Be a good person
-+ Add GIFs that can be used in the context of shipping code reviews, design reviews or just any "Looks good to me" moment
++ Add GIFs that can be used in the context of shipping code reviews, design reviews or just any "Looks good to me" or "Ship it!" moments
 + You can add as many as you'd like
 + Use GIFs at a reasonable size, no more than 5MB.
++ GIFs should come from one of the approved domains in [domains.json](domains.json)
 + GIFs need to pass all tests and be approved in a Pull Request.
 + Keep names all lowercase, the only special character that is allowed is a dash `-`.
 + Include all fields: `_id`, `name`, `url`, `description`, `active`.
@@ -20,21 +21,26 @@ The database of GIFs for https://shipit.today
 
 ## Rules that will be tested
 
-1. The existing names cannot be changed
-2. The existing entries cannot be removed
-3. The _id is required
-4. The _id needs to be the same as its index in the array
-5. The _id needs to be a number
-6. The name is required
-7. The name must be less than 50 characters
-8. The name must be unique
-9. The name must only contain lowercase letters, numbers and dashes (-)
-10. The name must start with a lowercase letter
-11. The url is required
-12. The url must be less than 2000 characters
-13. The description is required
-14. The description must be less than 200 characters
-15. The active state is required
++ The existing names cannot be changed
++ The existing entries cannot be removed
++ The _id is required
++ The _id needs to be the same as its inex in the array
++ The _id needs to be a number
++ The name is required
++ The name must be less than 50 characters
++ The name must be unique
++ The name must only contain lowercase letters, numbers and dashes (-)
++ The name must start with a lowercase letter
++ The url is required
++ The url must be less than 2000 characters
++ The url must start with https://
++ The url must use an approved domain
++ The url must not have query params
++ The url must end with .gif
++ The description cannot contain special characters
++ The description is required
++ The description must be less than 200 characters
++ The active state is required
 
 ## Structure of new submissions
 
