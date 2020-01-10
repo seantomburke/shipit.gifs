@@ -98,6 +98,13 @@
       "url": "https://media3.giphy.com/media/l2R0dZTDEZ9rS2O6k/giphy.gif",
       "description": "Donald Glover from Community thumbs up",
       "active": 1
+    },
+    {
+      "_id": 14,
+      "name": "billclinton",
+      "url": "https://media1.giphy.com/media/JWCiyy4mTybtK/giphy.gif",
+      "description": "Bill Clinton thumbs up",
+      "active": 1
     }
   ]
 }
