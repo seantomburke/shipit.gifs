@@ -105,6 +105,13 @@
       "url": "https://media1.giphy.com/media/JWCiyy4mTybtK/giphy.gif",
       "description": "Bill Clinton thumbs up",
       "active": 1
+    },
+    {
+      "_id": 15,
+      "name": "lumberjack",
+      "url": "https://media0.giphy.com/media/NEvPzZ8bd1V4Y/giphy.gif",
+      "description": "Lumberjack nodding yes",
+      "active": 1
     }
   ]
 }
