@@ -133,6 +133,13 @@
       "url": "https://media.tenor.com/images/b7e1207167670eb305f4d3b11ae4d29a/tenor.gif",
       "description": "ship it, fuck design, ship this shit now!",
       "active": 1
+    },
+    {
+      "_id": 19,
+      "name": "thor",
+      "url":"https://media0.giphy.com/media/HkA9xsCxJCRWw/giphy.gif",
+      "description": "Thor smash cup, adorbs & pleasing to my eyes, I ship it",
+      "active": 1
     }
   ]
 }
