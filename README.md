@@ -65,7 +65,7 @@ The database of GIFs for https://www.shipit.today
 
 1. Add your gif to the end of the gifs array in [`gifs.json`](https://github.com/seantomburke/shipit.gifs/blob/master/gifs.json) with the correct JSON structure
 2. Run `npm test` to make sure everything passes
-3. Create a pull request with the 2 file changes
+3. Create a pull request with the changed [`gifs.json`](https://github.com/seantomburke/shipit.gifs/blob/master/gifs.json) file
 4. Make sure to include the GIF in an image tag in the comment section of the Pull Request for easy review
 5. Wait for submission to be approved
 
