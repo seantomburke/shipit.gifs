@@ -140,17 +140,26 @@
       "url":"https://media0.giphy.com/media/HkA9xsCxJCRWw/giphy.gif",
       "description": "Thor smash cup, adorbs & pleasing to my eyes, I ship it",
       "active": 1
-    }, {
+    }, 
+    {
       "_id": 20,
       "name": "bill",
       "url" :"https://media1.tenor.com/images/6c28b91cf6864e36faf0a60f6d838fd6/tenor.gif",
       "description": "Bill O'reilly yelling Ship it! (Fuck it!) we'll do it live!",
       "active": 1
-    }, {
+    }, 
+    {
       "_id": 21,
       "name": "internetkid",
       "url" :"https://media.giphy.com/media/XreQmk7ETCak0/giphy.gif",
       "description": "internet kid on computer giving a thumbs up",
+      "active": 1
+    }, 
+    {
+      "_id": 22,
+      "name": "bob",
+      "url" :"https://media.giphy.com/media/3o6UB0WHErPubNDTfa/giphy.gif",
+      "description": "Bob Odenkirk giving thumbs up at award ceremony, better call saul",
       "active": 1
     }
   ]
