@@ -1,4 +1,3 @@
-
 {
   "gifs": [
     {
@@ -140,25 +139,25 @@
       "url": "https://media0.giphy.com/media/HkA9xsCxJCRWw/giphy.gif",
       "description": "Thor smash cup, adorbs & pleasing to my eyes, I ship it",
       "active": 1
-    }, 
+    },
     {
       "_id": 20,
       "name": "bill",
-      "url" : "https://media1.tenor.com/images/6c28b91cf6864e36faf0a60f6d838fd6/tenor.gif",
+      "url": "https://media1.tenor.com/images/6c28b91cf6864e36faf0a60f6d838fd6/tenor.gif",
       "description": "Bill O'reilly yelling Ship it! (Fuck it!) we'll do it live!",
       "active": 1
-    }, 
+    },
     {
       "_id": 21,
       "name": "internetkid",
-      "url" : "https://media.giphy.com/media/XreQmk7ETCak0/giphy.gif",
+      "url": "https://media.giphy.com/media/XreQmk7ETCak0/giphy.gif",
       "description": "internet kid on computer giving a thumbs up",
       "active": 1
-    }, 
+    },
     {
       "_id": 22,
       "name": "bob",
-      "url" : "https://media.giphy.com/media/3o6UB0WHErPubNDTfa/giphy.gif",
+      "url": "https://media.giphy.com/media/3o6UB0WHErPubNDTfa/giphy.gif",
       "description": "Bob Odenkirk giving thumbs up at award ceremony, better call saul",
       "active": 1
     },
@@ -371,7 +370,13 @@
       "url": "https://media.giphy.com/media/l3q2Z6S6n38zjPswo/giphy.gif",
       "description": "Indian guy on a game show dancing",
       "active": 0
+    },
+    {
+      "_id": 53,
+      "name": "borat",
+      "url": "https://media.giphy.com/media/a0h7sAqON67nO/giphy.gif",
+      "description": "Borat - great success!!",
+      "active": 1
     }
   ]
 }
-  
