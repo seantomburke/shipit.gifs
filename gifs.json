@@ -367,9 +367,9 @@
     {
       "_id": 52,
       "name": "gameshow",
-      "url": "https://media.giphy.com/media/l3q2Z6S6n38zjPswo/giphy.gif",
+      "url": "https://media.giphy.com/media/D7T5m0AFV8Yg0/giphy.gif",
       "description": "Indian guy on a game show dancing",
-      "active": 0
+      "active": 1
     },
     {
       "_id": 53,
