@@ -1,6 +1,6 @@
 {
   "name": "shipit.gifs",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "GIFs data for https://shipit.today",
   "main": "gifs.json",
   "files": [
