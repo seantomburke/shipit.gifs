@@ -377,6 +377,13 @@
       "url": "https://media.giphy.com/media/a0h7sAqON67nO/giphy.gif",
       "description": "Borat - great success!!",
       "active": 1
+    },
+    {
+      "_id": 54,
+      "name": "celeryman",
+      "url": "https://media.giphy.com/media/l1af4kUHsakF8A5lmC/source.gif", 
+      "description": "Paul Rudd as celeryman saying oh shit (oh shipit)",
+      "active": 1
     }
   ]
 }
