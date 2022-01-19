@@ -437,7 +437,7 @@
     {
       "_id": 62,
       "name": "roughwater",
-      "url": "https://media.giphy.com/media/bZBmitwUwKtDa/giphy.gif",
+      "url": "https://i.giphy.com/media/bZBmitwUwKtDa/giphy.webp",
       "description": "It's not easy to ship this good",
       "active": 1
     },
@@ -458,9 +458,9 @@
     {
       "_id": 65,
       "name": "setsail",
-      "url": "https://media.giphy.com/media/oGETnrfibydbDKKysk/giphy.gif",
+      "url": "https://i.giphy.com/media/oGETnrfibydbDKKysk/giphy.webp",
       "description": "Let's set sail!",
       "active": 1
-    },
+    }
   ]
 }
