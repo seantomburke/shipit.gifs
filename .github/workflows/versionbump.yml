@@ -7,9 +7,6 @@ on:
     # file paths to consider in the event. Optional; defaults to all.
     paths:
       - 'gifs.json'
-    paths-ignore:
-      - 'package.json'
-      - 'package-lock.json'
 
 jobs:
   build:
