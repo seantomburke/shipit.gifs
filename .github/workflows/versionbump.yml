@@ -52,7 +52,7 @@ jobs:
     needs: build
     strategy:
       matrix:
-        node-version: [10.x]
+        node-version: [16.x]
     steps:
     - name: draft release
       id: draft_release
