@@ -461,6 +461,13 @@
       "url": "https://i.giphy.com/media/oGETnrfibydbDKKysk/giphy.webp",
       "description": "Let's set sail!",
       "active": 1
+    },
+    {
+      "_id": 66,
+      "name": "astronaut",
+      "url": "https://media.giphy.com/media/cEYFeE4wJ6jdDVBiiIM/giphy-downsized-large.gif",
+      "description": "To tha moon!",
+      "active": 1
     }
   ]
 }
