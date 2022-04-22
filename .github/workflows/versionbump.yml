@@ -1,4 +1,4 @@
-name: Bump NPM Version
+name: Bump NPM Version and draft release
 
 on:
   push:
@@ -7,12 +7,17 @@ on:
     # file paths to consider in the event. Optional; defaults to all.
     paths:
       - 'gifs.json'
+    paths-ignore:
+      - 'package.json'
+      - 'package-lock.json'
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
 
+    outputs:
+      nodeVersion: ${{ steps.bump_version.outputs.version }}
     strategy:
       matrix:
         node-version: [16.x]
@@ -30,7 +35,7 @@ jobs:
       env:
         CI: true
     - name: update cache
-      run: | 
+      run: |
         yarn build:cache
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
@@ -38,8 +43,29 @@ jobs:
         git diff-index --quiet HEAD || git commit -m "updating cache"
         git push
     - name: bump version
+      id: bump_version
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
+        echo "::set-output name=version::$(echo $(node -p "require('./package.json').version.trim()"))"
         yarn version --patch
         git push
+  release:
+    runs-on: ubuntu-latest
+    needs: build
+    strategy:
+      matrix:
+        node-version: [10.x]
+    steps:
+    - name: draft release
+      id: draft_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+      with:
+        tag_name: ${{ needs.build.outputs.nodeVersion }}
+        release_name: Release ${{ needs.build.outputs.nodeVersion }}
+        body: |
+          Releasing version ${{ needs.build.outputs.nodeVersion }} to NPM
+        draft: true # Once tested this can be switched to false to immediately release to NPM
+        prerelease: false
