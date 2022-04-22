@@ -1,9 +1,3 @@
-
 {
-  "domains": [
-    "giphy.com",
-    "gifer.com",
-    "tenor.com"
-  ]
+  "domains": ["giphy.com", "gifer.com", "tenor.com"]
 }
-  

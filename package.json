@@ -7,9 +7,23 @@
     "gifs.json"
   ],
   "scripts": {
-    "build": "npm test && npm run cache",
-    "cache": "node cache.js",
-    "test": "node test.js"
+    "build": "yarn test && yarn build:cache",
+    "build:cache": "node cache.js",
+    "test": "./node_modules/.bin/jest",
+    "add:gif": "node add-gif.js",
+    "test:watch": "yarn test --watch",
+    "prepare": "husky install",
+    "prettier:write": "./node_modules/.bin/prettier --write '*.{js,json,md}'"
+  },
+  "lint-staged": {
+    "*.{js,json,md}": [
+      "yarn prettier:write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "repository": {
     "type": "git",
@@ -25,5 +39,15 @@
   "bugs": {
     "url": "https://github.com/seantomburke/shipit.gifs/issues"
   },
-  "homepage": "https://github.com/seantomburke/shipit.gifs#readme"
+  "homepage": "https://github.com/seantomburke/shipit.gifs#readme",
+  "devDependencies": {
+    "husky": "^7.0.0",
+    "jest": "^27.5.1",
+    "lint-staged": "^12.3.8",
+    "prettier": "^2.6.2"
+  },
+  "volta": {
+    "node": "16.14.2",
+    "yarn": "1.22.10"
+  }
 }
