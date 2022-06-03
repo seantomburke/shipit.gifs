@@ -748,6 +748,13 @@
       "url": "https://media.giphy.com/media/nLH7f5K1Tb1sY/giphy.gif",
       "description": "Lannister Nice",
       "active": 1
+    },
+    {
+      "_id": 107,
+      "name": "seal-of-approval",
+      "url": "https://media.giphy.com/media/13zeE9qQNC5IKk/giphy.gif",
+      "description": "A seal of approval",
+      "active": 1
     }
   ]
 }
