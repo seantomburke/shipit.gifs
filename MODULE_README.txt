@@ -1,0 +1,1 @@
+No user data is contained within this folder. The contents of this folder can safely be deleted when upgrading/downgrading the module.
