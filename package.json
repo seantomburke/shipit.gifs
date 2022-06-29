@@ -11,7 +11,7 @@
     "build:cache": "node cache.js",
     "test": "./node_modules/.bin/jest",
     "add:gif": "node add-gif.js",
-    "gh:pr": "node scripts/pull-request.js",
+    "gh:pr": "yarn test && node scripts/pull-request.js",
     "test:watch": "yarn test --watch",
     "prepare": "husky install",
     "prettier:write": "./node_modules/.bin/prettier --write '*.{js,json,md}'"

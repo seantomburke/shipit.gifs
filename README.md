@@ -71,6 +71,10 @@ Add your gif to the end of the gifs array in [`gifs.json`](https://github.com/se
 }
 ```
 
+### Opening a PR
+
+Run `yarn gh:pr` to automatically open a PR with your added GIFs rendered in the PR body, otherwise follow the instructions below.
+
 ### Validating and submitting your entry
 
 1. Run `yarn test` to make sure everything passes
