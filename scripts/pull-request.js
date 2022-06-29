@@ -8,7 +8,7 @@ async function run() {
   console.log('Writing PR body with new GIFs: ', newGIFLinks);
   const formattedGIFMarkDown = newGIFLinks.map((gifURL) => `![New GIF](${gifURL})\n`);
   const { stdout: branch } = await exec('git branch --show-current');
-  console.log('Pushing changes to remote\n', newGIFLinks);
+  console.log('Pushing changes to remote\n');
   await exec(`git push origin -u ${branch}`);
   console.log('Remote received changes\n');
   console.log('Opening new PR\n');
