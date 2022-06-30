@@ -46,8 +46,7 @@
     "jest": "^28.1.2",
     "lint-staged": "^13.0.3",
     "prettier": "^2.6.2",
-    "probe-image-size": "^7.2.3",
-    "yargs": "^17.5.1"
+    "probe-image-size": "^7.2.3"
   },
   "volta": {
     "node": "16.14.2",
