@@ -1,10 +1,10 @@
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
+const { gifs } = require('../gifs.json');
+const { _names: existingGifs } = require('../.cache.json');
 
 async function run() {
-  const r = new RegExp(/(\+      "url": "|",\n)/gm);
-  const { stdout: rawGIFLines } = await exec(`git diff master... gifs.json | grep '+      "url": '`);
-  const newGIFLinks = rawGIFLines.replace(r, '').split('+      url: ');
+  const newGIFLinks = gifs.slice(existingGifs.length, gifs.length).map(({ url }) => url);
   console.log('Writing PR body with new GIFs: ', newGIFLinks);
   const formattedGIFMarkDown = newGIFLinks.map((gifURL) => `![New GIF](${gifURL})\n`);
   const { stdout: branch } = await exec('git branch --show-current');
