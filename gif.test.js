@@ -30,11 +30,10 @@ describe('Validating all GIFs', () => {
 
     // Only pre-existing GIFs are tested here
     if (_id < existingGifs.length) {
-      // TODO: re-enable
-      // test(`${name}: Existing GIFs should not be modified`, () => {
-      //   // The existing names cannot be changed
-      //   expect(name).toBe(existingGifs[i]);
-      // });
+      test(`${name}: Existing GIFs should not be modified`, () => {
+        // The existing names cannot be changed
+        expect(name).toBe(existingGifs[i]);
+      });
 
       existingURLs.add(url);
 
