@@ -13,7 +13,7 @@ async function run() {
   console.log('Remote received changes\n');
   console.log('Opening new PR\n');
   const { stdout: message } = await exec(
-    `gh pr create --title 'Adding More Gifs' --body '## Added GIFs \n\n ${formattedGIFMarkDown}'`
+    `gh pr create -l 'automerge' -t 'Adding More Gifs' -b '## Added GIFs \n\n ${formattedGIFMarkDown}'`
   );
   console.log(`New PR opened @ ${message.replace('\n', '')}`);
 }
