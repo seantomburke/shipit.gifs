@@ -1,10 +1,12 @@
-name: Release
+name: Bump NPM Version and draft release
 
 on:
-  workflow_run:
-    workflows: [Test Pull Request]
-    types:
-      - completed
+  push:
+    branches:
+      - master
+    # file paths to consider in the event. Optional; defaults to all.
+    paths:
+      - 'gifs.json'
 
 jobs:
   build:
@@ -23,7 +25,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     - name: yarn test
       run: |
         yarn
@@ -53,7 +54,6 @@ jobs:
       matrix:
         node-version: [16.x]
     steps:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     - name: draft release
       id: draft_release
       uses: actions/create-release@v1
