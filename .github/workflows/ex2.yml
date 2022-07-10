@@ -8,7 +8,7 @@ on:
       - completed
 
 jobs:
-  job-2:
+  job2:
     runs-on: ubuntu-latest
     steps:
     - run: echo ' world'
