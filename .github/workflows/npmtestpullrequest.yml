@@ -1,25 +1,23 @@
-name: Test Pull Request
+name: Tests
 
 on: [pull_request]
 
 jobs:
-  build:
-
+  run-tests:
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [16.x]
-
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-    - name: yarn test
-      run: |
-        yarn
-        yarn test
+        cache: 'yarn'
+    - name: Install Dependencies
+    - run: yarn --frozen-lockfile
+    - name: Run Tests
+    - run: yarn test
       env:
         CI: true
