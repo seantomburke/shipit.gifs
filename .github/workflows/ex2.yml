@@ -2,8 +2,7 @@ name: EXtwo
 
 on:
   workflow_run:
-    workflows: 
-      - EXone
+    workflows: [EXone]
     types:
       - completed
 
