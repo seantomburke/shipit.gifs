@@ -13,17 +13,16 @@ jobs:
       matrix:
         node-version: [16.x]
     steps:
-      - name: Checkout code
-          uses: actions/checkout@v3
-      - name: draft release
-        id: draft_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-        with:
-          tag_name: ${{ needs.build.outputs.nodeVersion }}
-          release_name: Release ${{ needs.build.outputs.nodeVersion }}
-          body: |
-            Releasing version ${{ needs.build.outputs.nodeVersion }} to NPM
-          draft: true # Once tested this can be switched to false to immediately release to NPM
-          prerelease: false
+    - uses: actions/checkout@v3
+    - name: draft release
+      id: draft_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+      with:
+        tag_name: ${{ needs.build.outputs.nodeVersion }}
+        release_name: Release ${{ needs.build.outputs.nodeVersion }}
+        body: |
+          Releasing version ${{ needs.build.outputs.nodeVersion }} to NPM
+        draft: true # Once tested this can be switched to false to immediately release to NPM
+        prerelease: false
