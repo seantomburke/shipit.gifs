@@ -14,9 +14,6 @@ jobs:
 
     outputs:
       nodeVersion: ${{ steps.bump_version.outputs.version }}
-    strategy:
-      matrix:
-        node-version: [16.x]
 
     steps:
     - uses: actions/checkout@v3
