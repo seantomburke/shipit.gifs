@@ -1,9 +1,9 @@
-name: EX 2
+name: EXtwo
 
 on:
   workflow_run:
     workflows: 
-      - EX 1
+      - EXone
     types:
       - completed
 

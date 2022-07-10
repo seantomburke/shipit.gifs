@@ -1,4 +1,4 @@
-name: EX 1
+name: EXone
 
 on: 
   - pull_request
