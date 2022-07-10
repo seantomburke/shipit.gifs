@@ -1,9 +1,14 @@
-name: Run Tests
+name: EX 2
 
-on: [pull_request]
+on:
+  workflow_run:
+    workflows: 
+      - EX 1
+    types:
+      - completed
 
 jobs:
-  run-tests:
+  job-2:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -14,5 +19,4 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'yarn'
-    - run: yarn --frozen-lockfile
-    - run: yarn test
+    - run: echo ' world'
