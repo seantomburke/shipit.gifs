@@ -10,4 +10,5 @@ on:
 jobs:
   job-2:
     runs-on: ubuntu-latest
+    steps:
     - run: echo ' world'
