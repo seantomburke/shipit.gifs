@@ -1,13 +1,13 @@
-name: Bump Version
+name: Build
 
 on:
   workflow_run:
-    workflows: ["Build"]
+    workflows: ["Run Tests"]
     types:
       - completed
 
 jobs:
-  bump:
+  build:
 
     runs-on: ubuntu-latest
 
@@ -23,11 +23,13 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'yarn'
-    - name: bump version
-      id: bump_version
+    - name: build
+      id: build
       run: |
+        yarn --frozen-lockfile
+        yarn build:cache
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        echo "::set-output name=version::$(echo $(node -p "require('./package.json').version.trim()"))"
-        yarn version --patch
+        git add -A
+        git diff-index --quiet HEAD || git commit -m "updating cache"
         git push
