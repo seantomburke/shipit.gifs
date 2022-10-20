@@ -1049,6 +1049,13 @@
       "url": "https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy-downsized-large.gif",
       "description": "Mind Blown",
       "active": 1
+    },
+    {
+      "_id": 150,
+      "name": "clippy",
+      "url": "https://media.tenor.com/CguOrrmQ67MAAAAC/clippy-ship-it.gif",
+      "description": "Clippy Ship It",
+      "active": 1
     }
   ]
 }
