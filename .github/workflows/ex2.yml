@@ -1,0 +1,14 @@
+name: EXtwo
+
+on:
+  workflow_run:
+    workflows: ["EXone"]
+    types: [completed]
+    branches:
+      - 'rileyhilliard/**'
+
+jobs:
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo ' world'
