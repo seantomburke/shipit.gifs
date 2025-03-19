@@ -1063,6 +1063,13 @@
       "url": "https://media.tenor.com/5JCUkHJQBsAAAAAC/yacht-crypto.gif",
       "description": "Pepe the Frog",
       "active": 1
+    },
+    {
+      "_id": 152,
+      "name": "seal-of-approval",
+      "url": "https://media.giphy.com/media/13zeE9qQNC5IKk/giphy.gif",
+      "description": "A seal of approval",
+      "active": 1
     }
   ]
 }
