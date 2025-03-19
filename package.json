@@ -21,11 +21,6 @@
       "yarn prettier:write"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged --allow-empty"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/seantomburke/shipit.gifs.git"
