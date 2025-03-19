@@ -13,8 +13,8 @@
     "add:gif": "node add-gif.js",
     "gh:pr": "yarn test && node scripts/pull-request.js",
     "test:watch": "yarn test --watch",
-    "prettier:write": "./node_modules/.bin/prettier --write '*.{js,json,md}'",
-    "prepare": "husky"
+    "prepare": "husky",
+    "prettier:write": "./node_modules/.bin/prettier --write '*.{js,json,md}'"
   },
   "lint-staged": {
     "*.{js,json,md}": [
