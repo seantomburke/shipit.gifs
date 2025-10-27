@@ -39,7 +39,7 @@
   "devDependencies": {
     "husky": "^9.1.7",
     "jest": "^29.7.0",
-    "lint-staged": "^15.2.2",
+    "lint-staged": "^16.2.6",
     "prettier": "^3.2.5",
     "probe-image-size": "^7.2.3"
   },
